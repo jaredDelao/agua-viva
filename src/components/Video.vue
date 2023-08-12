@@ -29,6 +29,8 @@ export default {
 .container {
     width: 100%;
     height: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
 }
 
 .content {
@@ -37,7 +39,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: auto;
-    padding: 3em;
+    padding: 0 20px;
 }
 
 .video {
@@ -60,9 +62,11 @@ export default {
     text-align: center;
     font-size: 2em;
     margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .content {
         flex-direction: column;
     }
@@ -75,6 +79,27 @@ export default {
     .text p {
         max-width: 100%;
         margin-top: 10px;
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .text p, .text-end {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .text p, .text-end {
+        font-size: 1.4em !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .text p, .text-end {
+        font-size: 1.5em;
     }
 
 }

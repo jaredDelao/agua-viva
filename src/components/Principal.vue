@@ -20,46 +20,49 @@ export default {
 
 <style scoped>
 .container {
-    height: 100vh;
     background: #fff;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .content {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
-    width: 90%;
+    width: 100%;
 }
 
 .title {
     font-size: 4em;
     margin: 0;
     font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1em;
 }
 
 .title2 {
     font-size: 2.5em;
     font-weight: 200;
     margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
 }
 .title3 {
     font-size: 2.5em;
     font-weight: 800;
     margin: 0;
+    text-align: center;
 }
 
 .button {
     font-family: 'Poppins';
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: #FFA219;
     backdrop-filter: blur(2px);
     border-radius: 50px;
@@ -68,5 +71,44 @@ export default {
     padding: 10px 30px;
     color: #000;
     font-weight: 700;
+    max-width: 500px;
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 400px) {
+    .title {
+        font-size: 2em !important;
+    }
+    .title3 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .title {
+        font-size: 3em !important;
+    }
+    .title2,
+    .title3 {
+        font-size: 1.4em !important;
+    }
+    .button {
+        font-size: 0.9em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 3em;
+    }
+    .title2,
+    .title3 {
+        font-size: 1.5em;
+    }
+
+    .button {
+        font-size: 1em;
+    }
 }
 </style>
