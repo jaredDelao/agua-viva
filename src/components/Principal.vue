@@ -1,10 +1,10 @@
 <template>
-    <div class="container">
+    <div class="container" ref="main">
 
-        <div class="h-top">
+        <div class="h-top box-img">
             <img src="../assets/hand-top.svg" alt="hand">
         </div>
-        <div class="h-bot">
+        <div class="h-bot box-img">
             <img src="../assets/hand-bot.svg" alt="hand">
         </div>
 
@@ -18,9 +18,42 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+import { onMounted, ref } from 'vue';
+
 export default {
     name: 'Principal',
     setup() {
+        const main = ref();
+        let tl;
+        let ctx;
+
+        onMounted(() => {
+            listenScroll();
+
+            ctx = gsap.context((self) => {
+                const boxes = self.selector('.box-img');
+                tl = gsap
+                    .timeline()
+                    .to(boxes[0], { y: 30, opacity: 0.3 })
+                    .to(boxes[1], { y: -70, opacity: 0.3 }, '<')
+                    .reverse();
+            }, main.value); // <- Scope!
+
+        })
+
+        const listenScroll = () => {
+            window.addEventListener('scroll', () => {
+                // checkMainScreen();
+                if (window.scrollY > 0 && window.scrollY < 20) {
+                    tl.play();
+                }
+
+                if (window.scrollY > 747) tl.reverse();
+            })
+        }
+
+        return { main }
 
     }
 }
@@ -160,4 +193,5 @@ export default {
     .button {
         font-size: 1em;
     }
-}</style>
+}
+</style>

@@ -53,7 +53,7 @@ export default {
 .text p {
     margin: 0;
     font-weight: 400;
-    font-size: 2.2em;
+    font-size: 30px;
     max-width: 550px;
 }
 
