@@ -1,5 +1,13 @@
 <template>
     <div class="container">
+
+        <div class="h-top">
+            <img src="../assets/hand-top.svg" alt="hand">
+        </div>
+        <div class="h-bot">
+            <img src="../assets/hand-bot.svg" alt="hand">
+        </div>
+
         <div class="content">
             <h1 class="title">¿Te quieres recuperar?</h1>
             <p class="title2">Sin ayuda resulta demasiado,</p>
@@ -26,8 +34,41 @@ export default {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 50px;
+    z-index: 3;
+}
+
+.h-bot,
+.h-top {
+    z-index: 0;
+}
+
+.h-top {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.h-top img {
+    width: 100%;
+    transform: rotate(7.282deg);
+    max-width: 250px;
+}
+
+.h-bot {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.h-bot img {
+    width: 100%;
+    transform: rotate(8.218deg);
+    max-width: 250px;
+
 }
 
 .content {
@@ -36,6 +77,8 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: 3;
+    position: relative;
 }
 
 .title {
@@ -54,6 +97,7 @@ export default {
     margin-bottom: 15px;
     text-align: center;
 }
+
 .title3 {
     font-size: 2.5em;
     font-weight: 800;
@@ -73,12 +117,15 @@ export default {
     font-weight: 700;
     max-width: 500px;
     margin-top: 150px;
+    z-index: 3;
+    position: relative;
 }
 
 @media screen and (max-width: 400px) {
     .title {
         font-size: 2em !important;
     }
+
     .title3 {
         font-size: 1em;
     }
@@ -88,10 +135,12 @@ export default {
     .title {
         font-size: 3em !important;
     }
+
     .title2,
     .title3 {
         font-size: 1.4em !important;
     }
+
     .button {
         font-size: 0.9em;
         width: 100%;
@@ -102,6 +151,7 @@ export default {
     .title {
         font-size: 3em;
     }
+
     .title2,
     .title3 {
         font-size: 1.5em;
@@ -110,5 +160,4 @@ export default {
     .button {
         font-size: 1em;
     }
-}
-</style>
+}</style>

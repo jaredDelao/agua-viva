@@ -26,7 +26,7 @@ import Footer from './components/Footer.vue';
 }
 
 .max-wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
 }
