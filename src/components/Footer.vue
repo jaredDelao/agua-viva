@@ -114,7 +114,7 @@ export default {
         const listenScroll = () => {
             window.addEventListener('scroll', () => {
                 console.log(window.scrollY)
-                if (window.scrollY > 3350) tl.play();
+                if (window.scrollY > 3250) tl.play();
                 if (window.scrollY < 2883) tl.reverse();
             })
         }
