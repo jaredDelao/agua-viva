@@ -77,7 +77,7 @@ export default {
 
 .grid-item img {
     width: 100%;
-    max-width: 200px;
+    max-width: 130px;
     min-width: 50px;
 }
 

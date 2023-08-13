@@ -10,7 +10,7 @@
                     <span class="xlg" :style="{ fontSize: index === currentIndex ? '6em' : '3em' }">{{ slide }}</span>
                     <span class="lg" :style="{ fontSize: index === currentIndex ? '4em' : '2em' }">{{ slide }}</span>
                     <span class="md" :style="{ fontSize: index === currentIndex ? '3em' : '1.5em' }">{{ slide }}</span>
-                    <span class="xs" :style="{ fontSize: index === currentIndex ? '2em' : '1em' }">{{ slide }}</span>
+                    <span class="xs" :style="{ fontSize: index === currentIndex ? '2.3em' : '1em' }">{{ slide }}</span>
                 </div>
             </slide>
         </carousel>
@@ -70,16 +70,19 @@ export default {
     font-size: 30px;
     color: #fff;
     margin-bottom: 30px;
+    line-height: 1.2em;
 }
 
 .slider .title p {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .slider .btn {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .slider .btn button {
@@ -109,6 +112,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100px;
 }
 
 .slide-content span {
@@ -141,6 +145,12 @@ export default {
     .slide-content .xlg,
     .slide-content .lg {
         display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slider .title {
+        font-size: 25px;
     }
 }
 
