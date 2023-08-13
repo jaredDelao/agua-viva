@@ -19,7 +19,7 @@
             </slide>
             <template #addons>
                 <Pagination />
-              </template>
+            </template>
         </carousel>
     </div>
 </template>
@@ -70,6 +70,10 @@ export default {
 .slider img {
     width: 100%;
     max-height: 600px;
+    -webkit-box-shadow: 13px 13px 0px 0px rgba(255, 162, 25, 1);
+    -moz-box-shadow: 13px 13px 0px 0px rgba(255, 162, 25, 1);
+    box-shadow: 13px 13px 0px 0px rgba(255, 162, 25, 1);
+    margin-bottom: 13px;
 }
 
 .slider .title {
@@ -108,5 +112,4 @@ export default {
 .carousel__pagination {
     margin-top: 30px;
 }
-
 </style>

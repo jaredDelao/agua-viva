@@ -3,7 +3,7 @@
         <div class="title">
             <p>¿Que nos hace ser lo que somos?</p>
         </div>
-        <carousel :autoplay="6000" :items-to-show="1.9" :breakpoints="breakpoints" :wrap-around="true"
+        <carousel :autoplay="autoplayInterval" :items-to-show="1.9" :breakpoints="breakpoints" :wrap-around="true"
             @slide-start="changeSlide">
             <slide v-for="(slide, index) in slides" :key="index">
                 <div class="slide-content">
