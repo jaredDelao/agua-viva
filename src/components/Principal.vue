@@ -2,7 +2,7 @@
     <div class="container" ref="main">
 
         <div class="h-top box-img">
-            <img src="../assets/hand-top.svg" alt="hand">
+            <img src="../assets/hand-top.png" alt="hand">
         </div>
         <div class="h-bot box-img">
             <img src="../assets/hand-bot.svg" alt="hand">

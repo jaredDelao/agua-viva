@@ -2,11 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="video">
-                <!-- Inserta la URL de tu video de YouTube aquí -->
-                <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/fOW8Y09GVek"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                <video controls width="100%" height="315" src="../assets/aguaViva.mp4"></video>
             </div>
             <div class="text">
                 <p>Nuestras dificultades
@@ -39,7 +35,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .video {
@@ -85,22 +81,43 @@ export default {
 }
 
 @media screen and (max-width: 400px) {
-    .text p, .text-end {
+
+    .text p,
+    .text-end {
         font-size: 1em;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .text p, .text-end {
+
+    .text p,
+    .text-end {
         font-size: 1.4em !important;
     }
 
 }
 
 @media screen and (max-width: 768px) {
-    .text p, .text-end {
+
+    .text p,
+    .text-end {
         font-size: 1.5em;
     }
+}
 
+.video {
+    position: relative;
+}
+
+.video::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 80%;
+    background: #FFA219;
+    z-index: -1;
 }
 </style>
